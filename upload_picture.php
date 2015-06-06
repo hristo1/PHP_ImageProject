@@ -4,7 +4,7 @@
 <?php require 'includes/header.inc';  ?>
 
 <h3>Изберете файл</h3>
-<? if(isset($_SESSION['role'])) {
+<?php if(isset($_SESSION['role'])) {
 	?>
 <div align="center"> 
 	<form action="uploading_picture.php" enctype="multipart/form-data" method="post" name="f" class="form">
@@ -30,7 +30,7 @@
 		    </div>    
 	</form>
 </div>
-<? } 
+<?php } 
 else {
 	header("Location: login.php");
 }?>

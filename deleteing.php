@@ -3,9 +3,9 @@
 $page_title = 'Изтриване';
 ?>
 
-<? require 'includes/header.inc'; ?>
+<?php require 'includes/header.inc'; ?>
 
-<?
+<?php
 if(!isset($_SESSION['role'])) {
 	header("Location: login.php");
 }

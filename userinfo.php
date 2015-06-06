@@ -13,7 +13,7 @@ $page_title = 'Потребители';
 }
 </script>
 
-<?
+<?php
 include_once('functions.php');
 $_SESSION['pageing'] = "users";
 $id = $_GET['id']; ?>
@@ -24,7 +24,7 @@ $id = $_GET['id']; ?>
             <th align="center">Качени снимки</th>
             <th align="center">E-mail</th>
             <th align="center">Регистриран</th>
-            <? 
+            <?php
             if (isset($_SESSION['role'])) {
              
                 if ($_SESSION['role'] == 1 || isset($_SESSION['id']) == '$id') {  
@@ -42,7 +42,7 @@ $id = $_GET['id']; ?>
             
           </tr></thead>
 
-            <?
+            <?php
               $results = mysqli_query($mysqli,"SELECT users.*, COUNT(pics.id) AS pic_count 
                                                 FROM users LEFT JOIN pics
                                                 ON users.id = pics.user_id
@@ -58,7 +58,7 @@ $id = $_GET['id']; ?>
                        <td align="center"><?=htmlspecialchars(stripslashes($row['pic_count']))?></td>
                        <td align="center"><?=htmlspecialchars(stripslashes($row['email']))?></td>
                        <td align="center"><?=htmlspecialchars(stripslashes($row['datereg']))?></td>
-                       <? 
+                       <?php
                           if (isset($_SESSION['role'])) {
                             if ($_SESSION['role'] == 1 || isset($_SESSION['id']) == '$id') {  
                               echo "<td align='center'><a href='deluser.php?id=$row[id]'>Редакция</a></td>"; 
@@ -70,17 +70,13 @@ $id = $_GET['id']; ?>
                               }
                           }?>        
                      </tr>
-                <?
+                <?php
                   }
                 
               } else {
                    echo "No records are found.";
               }
             ?>
-
-
-         
-
        </tbody>
         </table>
       </div>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 
 //short_open_tag = On  output_buffering = On 

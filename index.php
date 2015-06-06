@@ -1,21 +1,17 @@
-<?
-/*
- * Начална страница
- */
-?>
-<? require 'includes/init.inc'; ?>
 
-<?
+<?php require 'includes/init.inc'; ?>
+
+<?php
 $page_title = 'Начало';
 ?>
 
 
-<? require 'includes/header.inc'; ?>
+<?php require 'includes/header.inc'; ?>
 
 <h1>Най-новите снимки!</h1>
 
 
-<?
+<?php
   $query  = "SELECT * FROM pics  ORDER BY pic_upload_date DESC LIMIT 10";
   $result = $mysqli->query($query);
   $num_results = $result->num_rows;
@@ -24,12 +20,12 @@ $page_title = 'Начало';
 
 <table class="table-view">
   <tr>
-	<?
+	<?php
 	    $j=0;
 	    while($row = $result->fetch_assoc()){
 	?>
 	<td>
-		<?            
+		<?php           
 		    $object_title = htmlspecialchars(stripslashes($row['pic_name'].($row['pic_upload_date']?', '.$row['user_id']:'')));
 			$small_pic = $pictires_dir.$pictires_prefix.$row['pic_name']; 
         ?>
@@ -42,7 +38,7 @@ $page_title = 'Начало';
         <? }?>
         <a href="picture_view.php?id=<?=$row["id"]?>" class="more-info">Повече информация</a>
     </td>
-<?
+<?php
 	  if($j==1)
 	  {
 	    if(($j+1)<$num_results)
@@ -55,7 +51,7 @@ $page_title = 'Начало';
 ?>
   </tr>
 </table>
-<?  	
+<?php  	
   }
 
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 function pagination($query,$per_page=10,$page=1,$url='?'){   
     global $mysqli; 
     $test = $_SESSION['pageing'];

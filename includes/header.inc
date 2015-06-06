@@ -2,7 +2,7 @@
 <html>
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    	<title><?=$page_title;?></title>
+    	<title><?php $page_title;?></title>
     	<link href="styles/style.css" type="text/css" rel="stylesheet">
     </head>
     <body>  
@@ -20,7 +20,7 @@
                         
                     </div>
                     
-                    <? 
+                    <?php 
                         if(!isset($_SESSION['role'])){
                     ?>
 
@@ -28,7 +28,7 @@
                             <div class="top_menu_right">
                             <a href="login.php" class="top_menu_a">Вход</a>
                             <a href="register.php" class="top_menu_a">Регистрация</a>  
-                    <? 
+                    <?php 
                         }else
                         {
                             if($_SESSION['role']==2){ //user
@@ -37,7 +37,7 @@
                                 <div class="top_menu_right">
                                 <a href="upload_picture.php" class="top_menu_a">Качване на снимки</a>
                                 <a href="user_images.php" class="top_menu_a">Мойте снимки</a>
-                    <?                      
+                    <?php                      
                             }
                              if($_SESSION['role']==1){ //admin
                     ?>      
@@ -45,11 +45,11 @@
                                 <div class="top_menu_right">
                                 <a href="upload_picture.php" class="top_menu_a">Качване на снимки</a>
                                 <a href="user_images.php" class="top_menu_a">Мойте снимки</a>
-                            <?                      
+                            <?php                      
                             }
                     ?>
                        <a href="logout.php" class="top_menu_a">Изход</a>
-                    <?
+                    <?php
                         }
                     ?>
                     </div>
@@ -57,26 +57,26 @@
     		
     			</div>
                 <div id="user">
-                <? if(isset($_SESSION['username'])){ 
+                <?php if(isset($_SESSION['username'])){ 
                  ?>
-                 <a href="useredit.php?id=<?=$_['id']?>" class="users1"><? echo $_SESSION['username']; ?> </a>
-                <?
+                 <a href="useredit.php?id=<?$_['id']?>" class="users1"><?php echo $_SESSION['username']; ?> </a>
+                <?php
                 }?>
                 </div>
     			
     			<div id="left_menu">
-			    	<?
+			    	<?php
 				    $result = $mysqli->query("SELECT * FROM pic_category");
                     echo "<h2 align='center'>Категории</h2>";
 				    while($row = $result->fetch_assoc()){
 			    	?>
 					<a href="category.php?category=<?=$row['id']?>" class="left_menu_a"><?=htmlspecialchars(stripslashes($row['category_name']))?></a>
-					<? } ?>
+					<?php } ?>
     			</div>
     			
     			<div id="content">
                 
     				<div id="navigation"> 
     					<!--<a href=".">Начало</a>-->
-    					<?$navigation;?>
+    					<?php $navigation; ?>
     				</div>

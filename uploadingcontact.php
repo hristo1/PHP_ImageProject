@@ -6,7 +6,7 @@
 ?>
 
 <?php require 'includes/header.inc'; ?>
-	<?
+	<?php
 
 	if ($_POST["submit"])
 	{
@@ -15,7 +15,7 @@
 		$mysqli->query($query);
 		?>
 			<h1 id="massage1">Съобщението е изпратено</h1>
-		<?
+		<?php
 	}
 ?>
 

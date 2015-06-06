@@ -1,9 +1,9 @@
 
 <?php require 'includes/init.inc'; ?>
-<?$page_title = 'Качване на снимка';?>
+<?php $page_title = 'Качване на снимка';?>
 <?php require 'includes/header.inc'; ?>
 
-<?
+<?php
 
 if(!isset($_SESSION['role'])) {
 	header("Location: login.php");

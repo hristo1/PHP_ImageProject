@@ -6,7 +6,7 @@ $page_title = 'Снимки';
 ?>
 
 <?php require 'includes/header.inc'; ?>
-<?
+<?php
 include_once('functions.php');
 
  $_SESSION['pageing'] = "pics";
@@ -30,10 +30,10 @@ if (mysqli_num_rows($results) != 0) {
        ?>
         <h2 class="imageH2"><?=htmlspecialchars(stripslashes($row["pic_name"]))?></h2>
         <a href="picture_view.php?id=<?=$row['id']?>">
-              <img class="img2" src="<?=$small_pic?>" alt="<?=$object_title?>" title="<?=$object_title?>">
+              <img class="img2" src="<?=$small_pic?>" alt="<?php $object_title?>" title="<?php $object_title?>">
         </a>   
     <div class="uploaded">Качено: <?=htmlspecialchars(stripslashes($row["pic_upload_date"]))?></div>
-    <?
+    <?php
     }
   
 } else {

@@ -6,7 +6,7 @@ $page_title = 'Мойте снимки';
 ?>
 
 <?php require 'includes/header.inc'; ?>
-<?
+<?php
 include_once('functions.php');
  if (isset($_GET['id'])) {
    $uimg =  $_GET['id'];
@@ -28,12 +28,12 @@ if (mysqli_num_rows($results) != 0) {
       $object_title = htmlspecialchars(stripslashes($row['pic_name'].($row['pic_upload_date']?', '.$row['user_id']:'')));
       $small_pic = $pictires_dir.$pictires_prefix.$row['pic_name']; 
        ?>
-       <h1 align="center">Снимки качени от: <? echo $userName ?></h1>
+       <h1 align="center">Снимки качени от: <?php echo $userName ?></h1>
     <a href="picture_view.php?id=<?=$row['id']?>">
           <img class="img2" src="<?=$small_pic?>" alt="<?=$object_title?>" title="<?=$object_title?>">
         </a>   
     <div class="uploaded">Качено: <?=htmlspecialchars(stripslashes($row["pic_upload_date"]))?></div>
-    <?
+    <?php
     }
   
   } 

@@ -1,7 +1,4 @@
-<?
-/*
- * Страница за вход
- */
+<?php
  require 'includes/init.inc';
 
 	$page_title = 'Вход';
@@ -33,10 +30,10 @@
 ?>
 <div align="center"> 
 
-	<? if(isset($errorMessage)){
+	<?php if(isset($errorMessage)){
 		?>
 		<div class="errorBlock"><?=$errorMessage?></div>
-		<?
+		<?php
 	} ?>
 	<??>
 	 

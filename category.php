@@ -31,7 +31,7 @@ else{
 ?>
 
 <?php require 'includes/header.inc'; ?>
-<?
+<?php
 include_once('functions.php');
 
  $_SESSION['pageing'] = "pics";
@@ -65,7 +65,7 @@ if (mysqli_num_rows($results) != 0) {
               <img class="img2" src="<?=$small_pic?>" alt="<?=$object_title?>" title="<?=$object_title?>">
         </a>   
     <div class="uploaded">Качено: <?=htmlspecialchars(stripslashes($row["pic_upload_date"]))?></div>
-    <?
+    <?php
     }
   
 } else {

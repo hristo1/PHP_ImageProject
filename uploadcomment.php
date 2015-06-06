@@ -1,10 +1,10 @@
 
-<? require 'includes/init.inc'; 
+<?php require 'includes/init.inc'; 
  require 'includes/header.inc'; 
  $page_title = 'Коментари';
  ?>
 
-<?
+<?php
 if(!isset($_SESSION['role'])) {
 	header("Location: login.php");
 }

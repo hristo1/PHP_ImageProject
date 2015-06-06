@@ -6,7 +6,7 @@
 ?>
 
 <?php require 'includes/header.inc'; ?>
-<?
+<?php
   $_SESSION['pictureid'] = $_GET['id'];
 
   $results3 = mysqli_query($mysqli,"SELECT *, COUNT(ID) as total  FROM comments WHERE picture_id = '".$_SESSION['pictureid']."' group by picture_id ");
@@ -32,14 +32,14 @@
         $small_pic = $pictires_dir.$pictires_prefix.$row['pic_name'];
          ?>
       <a href="pictures.php?id=<?=$row['id']?>">
-            <img  class="img3" src="<?=$small_pic?>" alt="<?=$object_title?>" title="<?=$object_title?>">
+            <img  class="img3" src="<?=$small_pic?>" alt="<?php $object_title?>" title="<?php $object_title?>">
           </a>   
-      <div class="uploaded">Качено: <?=htmlspecialchars(stripslashes($row["pic_upload_date"]))?>, коментари <?echo $commentcount?></div>
+      <div class="uploaded">Качено: <?=htmlspecialchars(stripslashes($row["pic_upload_date"]))?>, коментари <?php echo $commentcount?></div>
       <br>
-      <?
+      <?php
       if(isset($_SESSION['id'])){ ?>
         <form action="deleteing.php">  <input id="deleteb" TYPE = "Submit" Name = "Delete" VALUE = "Изтриване на снимка" onclick='return checkDelete()'> </form>
-      <?
+      <?php
   }
       }
     
@@ -51,18 +51,17 @@
       $usernamebyID = mysqli_query($mysqli,"SELECT username FROM users where  id = ". $row["user_id"] ."");
       while($user = mysqli_fetch_array($usernamebyID)){ ?>
          <div class="Comment">Потребител: <?=htmlspecialchars(stripslashes($user["username"]))?></div>
-      <?}
+      <?php }
       ?>
-      <div class="Comment">Дата: <? $row["comment_date"]?> <?=htmlspecialchars(stripslashes($row["comment_date"]))?>
+      <div class="Comment">Дата: <?php $row["comment_date"]?> <?=htmlspecialchars(stripslashes($row["comment_date"]))?>
       <h2 class="comment2"><?=htmlspecialchars(stripslashes($row["comment"]))?></h2>
       </div>
-    <? }
+    <?php }
    }
   if(isset($_SESSION['role'])) {
 ?>
-
 <div id="respond" align="center">
-<? if ($commentcount < 10) {
+<?php if ($commentcount < 100) {
  ?>
   <h3>Оставете коментар</h3>
 
@@ -75,13 +74,9 @@
     <input name="submit" type="submit" value="Изпрати" />
 
   </form>
-  <? } ?>
+  <?php } ?>
 </div>
-<? } ?>
-<?
-
-
-?>
+<?php } ?>
 
 <script language="JavaScript" type="text/javascript">
       function checkDelete(){
