@@ -58,4 +58,4 @@ $page_title = 'Начало';
 
 
 
-<? require 'includes/footer.inc'; ?>
+<?phpS require 'includes/footer.inc'; ?>

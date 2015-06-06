@@ -20,4 +20,4 @@ global $pictureID;
 }
 ?>
 
-<? require 'includes/footer.inc'; ?>
+<?php require 'includes/footer.inc'; ?>

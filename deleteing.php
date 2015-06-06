@@ -31,4 +31,4 @@ if(!isset($_SESSION['role'])) {
 
 ?>
 
-<? require 'includes/footer.inc'; ?>
+<?php require 'includes/footer.inc'; ?>
