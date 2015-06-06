@@ -1,0 +1,359 @@
+html,body { height:100%; }
+body{
+	padding: 0px; 
+	margin: 0px;  
+	background-image: url(../images/bg3.jpg); /* вертикално преливащ фон с определена височина*/
+	background-repeat:  repeat; /* повтаря се по x - за да заеме целия екран */
+	background-color: #075a90; 
+	color: #332a1e; 
+	font-size: 13px;
+	font-family: Verdana; 
+}
+
+h1{
+	font-size: 18px; color: #555555;
+}
+
+h2{
+	font-size: 16px; color: #555555;
+}
+
+img{ /* за IE*/
+	border: 0; 
+}
+
+#site{
+	min-height: 765px;
+	height: 100%;
+	width: 960px; text-align: justify; background-color: #FFFFFF;
+}
+
+#header{
+	background-image: url(../images/header.jpg);
+	background-repeat: no-repeat;
+	height: 141px; 
+	margin: 0px;
+	border-radius: 0px 0px 8px 8px;
+}
+
+#top_menu{
+	/* background-image: url(../images/top_menu_backgr.jpg); background-repeat: no-repeat; height: 42px; */
+	height: 42px;
+	width: 100%;
+	border-radius: 8px px 0px 0px;
+	background-color: #0f75e8;
+
+}
+.top_menu_left{
+	float: left;
+}
+
+.top_menu_right{
+	float: right;
+	padding-right: 20px;
+}
+
+.top_menu_a:link, .top_menu_a:visited, .top_menu_a:active {
+	font-weight:bold; text-decoration: none; color:#ffffff; display:inline-block; padding-left: 20px; line-height:42px;
+}
+.top_menu_a:hover{
+	font-weight:bold; text-decoration:underline; color:#000000;	display:inline-block; padding-left: 20px; line-height:42px;
+}
+
+#left_menu{
+	background-image: url(../images/left_menu_backgr.jpg); background-repeat: repeat-y; width: 138px; float: left;
+}
+
+.left_menu_a:link, .left_menu_a:visited, .left_menu_a:active {
+	font-weight:bold; text-decoration: none; color:#555555;	display:block; width: 170px; padding-left: 25px; line-height:30px; text-transform: uppercase;
+
+}
+.left_menu_a:hover{
+	font-weight:bold; text-decoration:none; color:#0066CC;	display:block; width: 170px; padding-left: 40px; line-height:30px; text-transform: uppercase;
+}
+
+#content {
+	padding: 10px 20px 10px 20px; width: 710px; float: left; 
+}
+
+#footer{
+	font-size:12px; clear: both; text-align: center; padding: 10px 0px; 
+}
+
+#navigation {
+  color:#0f75e8; text-decoration: none; font-weight:bold;
+}
+#navigation a:link, #navigation a:visited, #navigation a:active {
+  color:#0f75e8; text-decoration: none; font-weight:bold;
+}
+#navigation a:hover {
+  color:#555555; text-decoration: none; font-weight:bold;
+}
+
+.form{
+	border: 1px solid #d9d9d9; background-color:#ececec; text-align:center; margin-top:15px; width:400px; display:inline-block; padding: 5px 10px;
+	background-image: url(../images/bgf.jpg);
+	border-radius: 20px;
+
+}
+.form label{
+	width: 150px; display: inline-block; text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+.form-title {
+	text-align:center; font-size:13px; color:#0f75e8; margin-left:20px; font-weight:bold; margin-top:3px; margin-bottom:3px; 
+}
+.form-row{
+	margin-bottom:3px; margin-top:3px; text-align: center; 
+
+}
+.form textarea{
+	width: 400px; text-align: left; height: 80px;
+}
+.form input[type="text"], .form input[type="password"]{ /* селектор за input полета с типове text и password */
+	width: 200px;
+
+}
+.form select{/* има някои особености - select-a трябва да е малко по-голям, за да е еднакъв с input :) */
+	width: 203px;
+}
+
+#submit{
+	padding-right: 55px;
+}
+.errorBlock{
+	border: 1px solid #d9d9d9; background-color:#ececec; color: #f33218; margin: 10px 0px; text-align: left; padding: 5px; width: 700px;
+}
+.infoBlock{
+	border: 1px solid #d9d9d9; background-color:#ececec; color: #139010; margin: 10px 0px; text-align: left; padding: 5px; width: 700px;
+}
+
+.table-list{
+	border: 1px solid #D9D9D9; border-collapse: collapse; border-spacing: 0; width: 100%;
+}
+.table-list tr:nth-child(odd){
+	background-color:#eeeeee;
+}
+.table-list tr:nth-child(even){
+	background-color:#ffffff;
+}
+.table-list tr:hover{
+	background-color:#b6c6d7;
+}
+.table-list th{
+	border: 1px solid #D9D9D9; padding: 3px; vertical-align: top; background-color:#dddddd;
+}
+.table-list td{
+	border: 1px solid #D9D9D9; padding: 3px; vertical-align: top;
+}
+
+.table-view{
+	width: 690px;
+}
+.table-view td{
+	width: 230px; vertical-align: top; text-align: center; padding: 0px 10px 10px 10px; color:#0f75e8;
+}
+.img{
+	border:1px solid #c1c1c1; padding: 2px;
+	width: 250px;
+	height: 250px;
+}
+.img2{
+	border:1px solid #c1c1c1; padding: 2px;
+	width: 90%;
+	height: 450px;
+	margin-top: 5px;
+}
+.img3{
+	height: 500px;
+	width: 95%;
+	padding-top: 30px;
+	margin-left: 2%;
+}
+.name{
+	font-size: 13px; text-transform: uppercase; color:#0f75e8; margin: 2px; font-weight: bold;
+}
+.uploaded{
+	font-size: 9px; color:#555555; font-style: italic; font-weight: bold; margin-top:3px;
+}
+.more-info:link, .more-info:visited, .more-info:active{
+	text-decoration:none; color:#0f75e8; margin-top:3px; display: inline-block;
+}
+.more-info:hover {
+	text-decoration: underline; color:#555555; margin-top:3px; display: inline-block;
+}
+.animal-info-table td{
+	vertical-align: top;
+}
+ul.pagination {
+	
+	padding: 0px;
+    text-align:center;
+    margin-right: 60px;
+    color:#829994;
+}
+ul.pagination li {
+    display:inline;
+    padding:0 3px;
+}
+ul.pagination a {
+    color:#0d7963;
+    display:inline-block;
+    padding:5px 10px;
+    border:1px solid #cde0dc;
+    text-decoration:none;
+}
+ul.pagination a:hover, 
+ul.pagination a.current {
+    background:#0d7963;
+    color:#fff; 
+}
+#respond {
+  margin-top: 40px;
+}
+
+#respond input[type='text'],
+#respond input[type='email'], 
+#respond textarea {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+
+  line-height: 1.4em;
+}
+#comment1{
+	outline: 1px dashed grey;
+	
+}
+.Comment{
+	font-size: 12px;
+	font-family: serif;
+	text-align: center;
+}	
+.comment2{
+	color: grey;
+	margin-top: -5px;
+}
+#user{
+
+	float: right;
+	margin-right: 15px;
+}
+#deleteb{
+	float: right;
+	margin-top: -30px;
+	margin-right: 20px;
+}
+.users{
+	text-decoration: none;
+	color: black;
+	margin-top: 20px;
+}
+.warning{
+	color: red;
+}
+.form-row2{
+	/*text-align: center;*/
+	margin-left: -120px;
+	margin-top: 6px;
+}
+.form-title3{
+	text-align:center;
+	font-size:13px; 
+	color:#0f75e8;
+	font-weight:bold; 
+	margin-top:3px; 
+	margin-bottom:3px; 
+	 resize: none;
+}
+.label16{
+	font-size:13px; 
+	font-weight:bold;
+	color:#0f75e8;
+	margin-top: 20px;
+	margin-left: -50px;
+}
+#formcon{
+	
+	width: 600px;
+}
+#massage1{
+	margin-top: 80px;
+	margin-left: 130px;
+}
+.users1{
+	color: #366166;
+	font-weight: bold;
+}
+.img4{
+width: 250px;
+height: 250px;
+}
+#statistic-left{
+	width: 270px;
+	float: left;
+	margin-top: 22px;
+	
+}
+#delbut{
+	margin-top: 20px;
+	margin-right: 40px;
+	margin-bottom: 50px;
+}
+#users23{
+	text-decoration: none;
+}
+#leftuser{
+	color: black}
+#pusers{
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+#statistic-right{
+ 	margin-top: 22px;
+
+	float: right;
+}
+#deleteb2{
+width: 200px;
+margin-right: 15px;
+}
+#user123{
+	margin-top: 50px;	
+}
+.imageH2{
+	/*border: 2px solid lime;*/
+	text-align: center;
+	margin-right: 135px;
+	margin-bottom: 10px;
+	margin-top: 00px;
+	font-family: "Times New Roman", Times, serif;
+}
+.datagrid table { 
+ border-collapse: collapse; 
+ text-align: left; 
+ width: 100%; 
+} 
+ .datagrid {
+ 	font: normal 12px/150% Courier New, Courier, monospace; 
+ 	background: #fff; overflow: hidden; border: 4px solid #0f75e8; -webkit-border-radius: 13px; -moz-border-radius: 13px; border-radius: 13px; 
+ 	margin-top: 40px;
+ 	margin-left: 15px;
+ }
+ .datagrid table td, .datagrid table th { padding: 7px 11px; }
+ .datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0f75e8), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #0f75e8 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f75e8', endColorstr='#00557F');background-color:#0f75e8; color:#FFFFFF; font-size: 12px; font-weight: bold; border-left: 0px solid #0070A8; } 
+ .datagrid table thead th:first-child { border: none; }
+ .datagrid table tbody td { color: #00496B; border-left: 3px solid #E1EEF4;font-size: 12px;font-weight: normal; }
+ .datagrid table tbody .alt td { background: #E1EEF4; color: #00496B; }
+ .datagrid table tbody td:first-child { border-left: none; }
+ .datagrid table tbody tr:last-child td { border-bottom: none; }
