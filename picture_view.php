@@ -61,7 +61,7 @@
   if(isset($_SESSION['role'])) {
 ?>
 <div id="respond" align="center">
-<?php if ($commentcount < 100) {
+<?php if ($commentcount < 10) {
  ?>
   <h3>Оставете коментар</h3>
 
@@ -84,4 +84,4 @@
   }
 </script>
 
-<? require 'includes/footer.inc'; ?>
+<?php require 'includes/footer.inc'; ?>
