@@ -42,6 +42,7 @@
                              if($_SESSION['role']==1){ //admin
                     ?>      
                                 <a href="statistics.php" class="top_menu_a">Статистика</a>
+                                <a href="massages.php" class="top_menu_a">Съобщения</a>
                                 <div class="top_menu_right">
                                 <a href="upload_picture.php" class="top_menu_a">Качване на снимки</a>
                                 <a href="user_images.php" class="top_menu_a">Мойте снимки</a>

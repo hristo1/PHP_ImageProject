@@ -56,8 +56,15 @@ if (mysqli_num_rows($results) != 0) {
           <tbody><tr>
             <td align="center"><?=htmlspecialchars(stripslashes($row["username"]))?></td>
             <td align="center"><?=htmlspecialchars(stripslashes($row['pic_count']))?></td>
-            <td align="center"><a href="user_images.php?id=<?=$row['id']?>">Виж</a></td>
-            <?php
+            <?php 
+              if ($row['pic_count'] != 0) { 
+                ?>
+                <td align="center"><a href="user_images.php?id=<?=$row['id']?>">Виж</a></td>
+              <?php }
+               if ($row['pic_count'] == 0) { 
+                ?>
+                <td align="center">Няма Снимки</td>
+              <?php }
               if (isset($_SESSION['role'])) {
              // if ($_SESSION['role'] == 1 ) {  
               //echo "<td align='center'><a href=''>Редакция</a></td>"; 

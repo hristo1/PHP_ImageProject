@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2015 at 08:01 PM
+-- Generation Time: Jun 07, 2015 at 10:19 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_id` smallint(5) NOT NULL,
   `picture_id` smallint(5) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `comments`
@@ -49,9 +49,17 @@ INSERT INTO `comments` (`id`, `comment`, `comment_date`, `user_id`, `picture_id`
 (8, 'adadsdas', '2015-06-06 17:23:20', 1, 75),
 (9, 'asddada', '2015-06-06 17:23:23', 1, 75),
 (10, 'asdsaads', '2015-06-06 17:23:27', 1, 75),
-(11, 'dasdasd', '2015-06-06 17:33:54', 1, 20),
-(12, 'cddssdfsfdsdf', '2015-06-06 17:33:58', 1, 20),
-(13, 'zxcsdsfsdsdf', '2015-06-06 17:34:01', 1, 20);
+(14, 'test', '2015-06-07 19:29:25', 1, 87),
+(15, 'dfsdfdfdsfsd', '2015-06-07 19:29:41', 39, 87),
+(16, 'asddsadas', '2015-06-07 20:06:39', 1, 90),
+(17, 'asdadsads', '2015-06-07 20:06:41', 1, 90),
+(18, 'asdasdad', '2015-06-07 20:06:42', 1, 90),
+(19, 'adssdsadas', '2015-06-07 20:06:44', 1, 90),
+(20, 'dadsaasdasd', '2015-06-07 20:06:46', 1, 90),
+(21, 'dasdsasdadas', '2015-06-07 20:06:48', 1, 90),
+(22, 'sdsadasdasd', '2015-06-07 20:06:49', 1, 90),
+(23, 'adsasgffdgdf', '2015-06-07 20:06:52', 1, 90),
+(24, 'asdadsadsasd', '2015-06-07 20:06:54', 1, 90);
 
 -- --------------------------------------------------------
 
@@ -61,50 +69,20 @@ INSERT INTO `comments` (`id`, `comment`, `comment_date`, `user_id`, `picture_id`
 
 CREATE TABLE IF NOT EXISTS `contacts` (
 `id` smallint(5) NOT NULL,
-  `username` varchar(30) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `massage` varchar(500) NOT NULL,
+  `username` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `massage` varchar(500) CHARACTER SET utf8 NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `contacts`
 --
 
 INSERT INTO `contacts` (`id`, `username`, `email`, `massage`, `date`) VALUES
-(1, 'adsadsads', '', '', '2015-05-29 08:05:13'),
-(2, 'adjfdsdfj', '', 'sadsaadsasdss', '2015-05-29 08:05:20'),
-(3, 'asdasdasdsadas', '', 'asdasdsaasdads', '2015-05-29 08:05:38'),
-(4, '???????', '', '?????????????????????', '2015-05-29 08:06:14'),
-(5, 'sadasasdads', 'sdasdadsa', 'asdsdadasads', '2015-05-29 08:06:32'),
-(6, 'dasadsa', 'asdsdaasd', 'asddsaads', '2015-05-29 08:07:48'),
-(7, 'dasdassa', 'asdd', 'asdsdaas', '2015-05-29 08:08:10'),
-(8, 'zxssad', 'sadasasd', 'asdsaads', '2015-05-29 08:10:00'),
-(9, 'zxssad', 'sadasasd', 'asdsaads', '2015-05-29 08:10:22'),
-(10, 'asdas', 'example23@abv.bg', 'dassadsdaasd', '2015-05-29 08:24:28'),
-(11, 'adsadads', 'example23@abv.bg', 'dasadssdasadadsasddas', '2015-05-29 08:24:49'),
-(12, '?????', 'example21@abv.bg', 'Lorem Ipsum ? ??????????? ???????? ?????, ????????? ? ???????????? ? ????????????? ?????????. Lorem Ipsum ? ???????????? ???????? ?? ????? 1500 ??????, ?????? ?????????? ??????? ????? ??????? ?????????? ????? ? ?? ?????????, ?? ?? ???????? ? ??? ????? ? ???????? ????????. ???? ????? ?? ???? ? ?????? ?????? ?? 5 ????, ?? ? ???????? ? ? ????????????? ?? ?????????? ??????? ???? ? ??????? ????? ??? ???????. ????????????? ? ???? 60?? ?????? ?? 20?? ??? ??? ?????????? ?? Letraset ?????, ????????? Lore', '2015-05-29 08:38:18'),
-(13, 'adssdaasd', 'example23@abv.bg', 'adssaasdasdasdasdads', '2015-05-29 08:39:26'),
-(14, 'eads', 'example23@abv.bg', 'asdadssadads', '2015-05-29 08:40:27'),
-(15, 'dasddas', 'example23@abv.bg', 'asdadsadsasd', '2015-05-29 08:42:52'),
-(16, 'asdasd', 'example23@abv.bg', 'asdsasasdasdads', '2015-05-29 08:44:40'),
-(17, 'adssdaasd', 'example21@abv.bg', 'asdsadsa', '2015-05-29 08:47:23'),
-(18, 'dasddas', 'example21@abv.bg', 'asdsdaasd', '2015-05-29 08:48:10'),
-(19, 'dasddas', 'example21@abv.bg', 'asdsdaasd', '2015-05-29 08:53:57'),
-(20, 'easdas', 'example23@abv.bg', 'fdssfdsddfsdfds', '2015-05-29 08:54:57'),
-(21, 'easdas', 'example23@abv.bg', 'fdssfdsddfsdfds', '2015-05-29 08:55:09'),
-(22, 'easdas', 'example23@abv.bg', 'fdssfdsddfsdfds', '2015-05-29 08:55:41'),
-(23, 'easdas', 'example23@abv.bg', 'fdssfdsddfsdfds', '2015-05-29 08:55:47'),
-(24, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:55:51'),
-(25, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:01'),
-(26, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:07'),
-(27, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:13'),
-(28, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:17'),
-(29, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:21'),
-(30, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:27'),
-(31, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:39'),
-(32, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:45'),
-(33, 'asdasa', 'example22@abv.bg', 'afdsdsfdssdf', '2015-05-29 08:56:49');
+(38, 'someUser', 'example21@abv.bg', 'Lorem Ipsum е елементарен примерен текст, използван в печатарската и типографската индустрия. Lorem Ipsum е индустриален стандарт от около 1500 година, когато неизвестен печатар взема няколко печатарски букви и ги разбърква, за да напечата с тях книга с примерни шрифтове. Този начин не само е оцелял повече от 5 века, но е навлязъл и в публикуването на електронни издания като е запазен почти без промяна. Популяризиран е през 60те години на 20ти век със издаването на Letraset листи, съдържащи Lore', '2015-06-07 19:42:24'),
+(39, 'User342', 'example21@abv.bg', 'asdasdasdsaadsadsads', '2015-06-07 19:52:24'),
+(40, 'annoying_orange', 'annoying_orange@mail.com', 'annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange annoying orange anno', '2015-06-07 20:05:19');
 
 -- --------------------------------------------------------
 
@@ -118,28 +96,13 @@ CREATE TABLE IF NOT EXISTS `pics` (
   `pic_upload_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `category_id` smallint(5) DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pics`
 --
 
 INSERT INTO `pics` (`id`, `pic_name`, `pic_upload_date`, `category_id`, `user_id`) VALUES
-(1, '6.jpg', '2015-06-04 09:28:26', 4, 2),
-(2, '3.jpg', '2015-06-04 09:28:26', 4, 2),
-(4, '4.jpg', '2015-06-04 09:28:26', 3, 2),
-(5, '2.jpg', '2015-06-04 09:28:26', 3, 2),
-(13, '1.png', '2015-06-04 09:28:26', 4, 2),
-(14, '5.jpg', '2015-06-04 09:28:26', 2, 2),
-(20, '7.jpg', '2015-06-04 09:28:26', 4, 2),
-(21, 'Arch2o-Synthesis-Design-+-Architecture-SDA-51.jpg', '2015-06-04 09:27:53', 3, 2),
-(23, 'hd-architecture-building-4.jpeg', '2015-06-04 09:27:47', 5, 2),
-(25, 'Pearl-Architecture.jpg', '2015-06-04 09:27:40', 3, 2),
-(26, 'Sydney_Opera_House_Sails_edit02_adj.JPG', '2015-06-04 09:27:31', 2, 2),
-(28, 'xlarge_1_doh3_3cf42.jpg', '2015-06-04 09:27:25', 2, 2),
-(30, 'Commercial-Building.jpg', '2015-06-04 09:27:19', 1, 2),
-(49, 'Testing.jpg', '2015-06-04 09:27:12', 2, 2),
-(57, 'under_construction.png', '2015-06-04 07:59:12', 1, 1),
 (66, 'PC.jpg', '2015-06-04 08:59:53', 1, 17),
 (67, 'funnny-2.jpg', '2015-06-04 09:34:10', 1, 17),
 (68, 'adYmQA2_700b.jpg', '2015-06-04 09:35:38', 1, 15),
@@ -148,7 +111,16 @@ INSERT INTO `pics` (`id`, `pic_name`, `pic_upload_date`, `category_id`, `user_id
 (72, 'aQ40eLe_700b_v2.jpg', '2015-06-04 09:38:51', 3, 18),
 (73, 'avgY2xb_700b.jpg', '2015-06-04 09:39:23', 3, 18),
 (74, 'agvPGnK_700b_v1.jpg', '2015-06-04 09:50:08', 3, 18),
-(75, 'ae0LXrq_700b_v1.jpg', '2015-06-04 09:50:57', 3, 18);
+(75, 'ae0LXrq_700b_v1.jpg', '2015-06-04 09:50:57', 3, 18),
+(76, '1.png', '2015-06-07 19:14:26', 2, 1),
+(77, '2.jpg', '2015-06-07 19:14:35', 2, 1),
+(78, '6.jpg', '2015-06-07 19:14:43', 2, 1),
+(80, 'Pearl-Architecture.jpg', '2015-06-07 19:15:27', 4, 1),
+(81, 'test.jpg', '2015-06-07 19:15:51', 5, 1),
+(82, '4.jpg', '2015-06-07 19:16:17', 5, 1),
+(84, 'Arch2o-Synthesis-Design-+-Architecture-SDA-51.jpg', '2015-06-07 19:20:05', 4, 1),
+(87, 'under_construction.png', '2015-06-07 19:21:44', 5, 1),
+(90, 'FunnyPart-com-mr_bean_in_avatar.jpg', '2015-06-07 19:31:24', 1, 39);
 
 -- --------------------------------------------------------
 
@@ -185,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role` int(1) NOT NULL DEFAULT '2',
   `email` varchar(30) CHARACTER SET utf8 NOT NULL,
   `datereg` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
@@ -193,7 +165,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `email`, `datereg`) VALUES
 (1, 'admin', 'admin', 1, 'admin@email.com', '2015-06-05 07:25:08'),
-(2, 'user', 'password', 2, 'example21@abv.bg', '2015-06-05 07:25:08'),
 (15, 'user13', 'password', 2, 'example21@abv.bg', '2015-06-05 07:25:08'),
 (16, 'user4', 'password', 2, 'example23@abv.bg', '2015-06-05 07:25:08'),
 (17, 'example', 'password', 2, 'example21@abv.bg', '2015-06-05 07:25:08'),
@@ -205,7 +176,9 @@ INSERT INTO `users` (`id`, `username`, `password`, `role`, `email`, `datereg`) V
 (35, 'us16', 'password', 2, 'example21@abv.bg', '2015-06-05 07:25:08'),
 (36, 'example22', 'password', 2, 'example21@abv.bg', '2015-06-05 07:25:08'),
 (37, 'example223', 'password', 2, 'example21@abv.bg', '2015-06-05 07:25:08'),
-(38, 'user14', 'password', 2, 'example21@abv.bg', '2015-06-05 07:35:08');
+(38, 'user14', 'password', 2, 'example21@abv.bg', '2015-06-05 07:35:08'),
+(39, 'user', 'password', 2, 'example21@abv.bg', '2015-06-07 19:22:32'),
+(40, 'user1234', 'password', 2, 'example23@abv.bg', '2015-06-07 19:55:11');
 
 --
 -- Indexes for dumped tables
@@ -249,17 +222,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
+MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `pics`
 --
 ALTER TABLE `pics`
-MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=76;
+MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=91;
 --
 -- AUTO_INCREMENT for table `pic_category`
 --
@@ -269,7 +242,7 @@ MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=41;
 --
 -- Constraints for dumped tables
 --

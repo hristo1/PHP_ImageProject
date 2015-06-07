@@ -14,6 +14,7 @@
 		$infoMessage = $query;
 		$result = $mysqli->query($query);
 	 	header("Location: login.php");
+	 	exit;
 	}
 	else{
 

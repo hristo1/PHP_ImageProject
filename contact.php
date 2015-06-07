@@ -32,7 +32,7 @@ $page_title = 'Контакти';
 	    </div>
 	         <div class="form-row2">
 			<label>E-mail</label>
-            <input type="text" maxlength="16" name="email" id="emailid">
+            <input type="text" name="email" id="emailid">
 	    </div>
 	    <label class="label16" for="passid">Съобщение</label>
 	    <div class="form-title3">

@@ -77,9 +77,9 @@ $id = $_GET['id']; ?>
                    echo "No records are found.";
               }
             ?>
-       </tbody>
-        </table>
-      </div>
+      </tbody>
+    </table>
+  </div>
 
 
 
