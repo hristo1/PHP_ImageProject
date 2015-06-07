@@ -32,11 +32,11 @@ $results = mysqli_query($mysqli,"SELECT users.*, COUNT(pics.id) AS pic_count
             <th align="center">Качени снимки</th>
             <th align="center">Виж всички снимки на потребителя</th>
             <?php
-                if (isset($_SESSION['role'])) {
-                if ($_SESSION['role'] == 1) {  
-                echo "<th align='center'>Редакция</th>"; 
-              }
-             }
+               // if (isset($_SESSION['role'])) {
+                //if ($_SESSION['role'] == 1) {  
+                //echo "<th align='center'>Редакция</th>"; 
+              //}
+            // }
              if (isset($_SESSION['role'])) {
               
                 if($_SESSION['role'] == 1)  {
@@ -59,9 +59,9 @@ if (mysqli_num_rows($results) != 0) {
             <td align="center"><a href="user_images.php?id=<?=$row['id']?>">Виж</a></td>
             <?php
               if (isset($_SESSION['role'])) {
-              if ($_SESSION['role'] == 1 ) {  
-              echo "<td align='center'><a href=''>Редакция</a></td>"; 
-              }  
+             // if ($_SESSION['role'] == 1 ) {  
+              //echo "<td align='center'><a href=''>Редакция</a></td>"; 
+              //}  
            }
               if (isset($_SESSION['role'])) {
                if($_SESSION['role'] == 1)  {

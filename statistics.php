@@ -16,19 +16,14 @@ $page_title = 'Потребители';
         $small_pic = $pictires_dir.$pictires_prefix.$row['pic_name'];
          ?>
             
-            <a href="pictures.php?id=<?=$row['id']?>">
+            <a href="picture_view.php?id=<?=$row['id']?>">
             <img  class="img4" src="<?=$small_pic?>" alt="<?php $object_title?>" title="<?php $object_title?>">
             </a>   
       <div class="uploaded">Качено: <?=htmlspecialchars(stripslashes($row["pic_upload_date"]))?></div>
       <br>
-
       <?php
-      if(isset($_SESSION['id'])){ ?>
-        <form action="deleteing.php" id="delbut">  <input id="deleteb" TYPE = "Submit" Name = "Delete" VALUE = "Изтриване на снимка"> </form>
-      <?php
+    }
   }
-  }
-}
  ?>
  </div>
  <div id = "statistic-right"> <h1>Последно регистриране потребители</h1>

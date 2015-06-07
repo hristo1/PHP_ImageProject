@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.7.1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 
--- Версия на сървъра: 5.6.20
--- PHP Version: 5.5.15
+-- Generation Time: Jun 07, 2015 at 08:01 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `comments`
+-- Table structure for table `comments`
 --
 
 CREATE TABLE IF NOT EXISTS `comments` (
@@ -32,12 +32,31 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_id` smallint(5) NOT NULL,
   `picture_id` smallint(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `comment`, `comment_date`, `user_id`, `picture_id`) VALUES
+(1, 'addsdads', '2015-06-06 17:21:38', 1, 75),
+(2, 'dasds\r\n', '2015-06-06 17:23:00', 1, 75),
+(3, 'ad', '2015-06-06 17:23:03', 1, 75),
+(4, 'asddas', '2015-06-06 17:23:07', 1, 75),
+(5, 'adsasd', '2015-06-06 17:23:10', 1, 75),
+(6, 'adsas', '2015-06-06 17:23:13', 1, 75),
+(7, 'asdsaads', '2015-06-06 17:23:16', 1, 75),
+(8, 'adadsdas', '2015-06-06 17:23:20', 1, 75),
+(9, 'asddada', '2015-06-06 17:23:23', 1, 75),
+(10, 'asdsaads', '2015-06-06 17:23:27', 1, 75),
+(11, 'dasdasd', '2015-06-06 17:33:54', 1, 20),
+(12, 'cddssdfsfdsdf', '2015-06-06 17:33:58', 1, 20),
+(13, 'zxcsdsfsdsdf', '2015-06-06 17:34:01', 1, 20);
 
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `contacts`
+-- Table structure for table `contacts`
 --
 
 CREATE TABLE IF NOT EXISTS `contacts` (
@@ -46,10 +65,10 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `email` varchar(30) NOT NULL,
   `massage` varchar(500) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 --
--- Схема на данните от таблица `contacts`
+-- Dumping data for table `contacts`
 --
 
 INSERT INTO `contacts` (`id`, `username`, `email`, `massage`, `date`) VALUES
@@ -90,7 +109,7 @@ INSERT INTO `contacts` (`id`, `username`, `email`, `massage`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `pics`
+-- Table structure for table `pics`
 --
 
 CREATE TABLE IF NOT EXISTS `pics` (
@@ -99,10 +118,10 @@ CREATE TABLE IF NOT EXISTS `pics` (
   `pic_upload_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `category_id` smallint(5) DEFAULT NULL,
   `user_id` smallint(5) unsigned NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=76 ;
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=latin1;
 
 --
--- Схема на данните от таблица `pics`
+-- Dumping data for table `pics`
 --
 
 INSERT INTO `pics` (`id`, `pic_name`, `pic_upload_date`, `category_id`, `user_id`) VALUES
@@ -134,16 +153,16 @@ INSERT INTO `pics` (`id`, `pic_name`, `pic_upload_date`, `category_id`, `user_id
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `pic_category`
+-- Table structure for table `pic_category`
 --
 
 CREATE TABLE IF NOT EXISTS `pic_category` (
 `id` smallint(5) NOT NULL,
   `category_name` varchar(20) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
--- Схема на данните от таблица `pic_category`
+-- Dumping data for table `pic_category`
 --
 
 INSERT INTO `pic_category` (`id`, `category_name`) VALUES
@@ -156,7 +175,7 @@ INSERT INTO `pic_category` (`id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -166,10 +185,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role` int(1) NOT NULL DEFAULT '2',
   `email` varchar(30) CHARACTER SET utf8 NOT NULL,
   `datereg` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 
 --
--- Схема на данните от таблица `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `email`, `datereg`) VALUES
@@ -230,7 +249,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT;
+MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `contacts`
 --
@@ -252,17 +271,17 @@ MODIFY `id` smallint(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 ALTER TABLE `users`
 MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
--- Ограничения за дъмпнати таблици
+-- Constraints for dumped tables
 --
 
 --
--- Ограничения за таблица `comments`
+-- Constraints for table `comments`
 --
 ALTER TABLE `comments`
 ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`picture_id`) REFERENCES `pics` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ограничения за таблица `pics`
+-- Constraints for table `pics`
 --
 ALTER TABLE `pics`
 ADD CONSTRAINT `pics_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `pic_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

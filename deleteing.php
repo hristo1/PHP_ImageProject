@@ -1,4 +1,4 @@
-<? require 'includes/init.inc'; ?>
+<?php require 'includes/init.inc'; ?>
 <?php
 $page_title = 'Изтриване';
 ?>

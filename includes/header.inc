@@ -59,7 +59,7 @@
                 <div id="user">
                 <?php if(isset($_SESSION['username'])){ 
                  ?>
-                 <a href="useredit.php?id=<?$_['id']?>" class="users1"><?php echo $_SESSION['username']; ?> </a>
+                 <a href="userinfo.php?id=<?=$_SESSION['role']?>" class="users1"><?php echo $_SESSION['username']; ?> </a>
                 <?php
                 }?>
                 </div>

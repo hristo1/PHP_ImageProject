@@ -25,12 +25,12 @@ $id = $_GET['id']; ?>
             <th align="center">E-mail</th>
             <th align="center">Регистриран</th>
             <?php
-            if (isset($_SESSION['role'])) {
-             
-                if ($_SESSION['role'] == 1 || isset($_SESSION['id']) == '$id') {  
-                echo "<th align='center'>Редакция</th>"; 
-              }
-             }
+            //if (isset($_SESSION['role'])) {
+             //
+               // if ($_SESSION['role'] == 1 || isset($_SESSION['id']) == '$id') {  
+                //echo "<th align='center'>Редакция</th>"; 
+              //}
+             //}
             if (isset($_SESSION['role'])) {
               
                 if($_SESSION['role'] == 1)  {
@@ -59,11 +59,11 @@ $id = $_GET['id']; ?>
                        <td align="center"><?=htmlspecialchars(stripslashes($row['email']))?></td>
                        <td align="center"><?=htmlspecialchars(stripslashes($row['datereg']))?></td>
                        <?php
-                          if (isset($_SESSION['role'])) {
-                            if ($_SESSION['role'] == 1 || isset($_SESSION['id']) == '$id') {  
-                              echo "<td align='center'><a href='deluser.php?id=$row[id]'>Редакция</a></td>"; 
-                            }  
-                          }
+                         // if (isset($_SESSION['role'])) {
+                          //  if ($_SESSION['role'] == 1 || isset($_SESSION['id']) == '$id') {  
+                           //   echo "<td align='center'><a href='deluser.php?id=$row[id]'>Редакция</a></td>"; 
+                            //}  
+                          //}
                           if (isset($_SESSION['role'])) {
                               if($_SESSION['role'] == 1)  {
                            echo "<td align='center'><a href='deluser.php?id=$row[id]' onclick='return checkDelete()'>Изтриване</a></td>"; 

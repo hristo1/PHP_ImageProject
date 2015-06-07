@@ -37,10 +37,13 @@
       <div class="uploaded">Качено: <?=htmlspecialchars(stripslashes($row["pic_upload_date"]))?>, коментари <?php echo $commentcount?></div>
       <br>
       <?php
-      if(isset($_SESSION['id'])){ ?>
-        <form action="deleteing.php">  <input id="deleteb" TYPE = "Submit" Name = "Delete" VALUE = "Изтриване на снимка" onclick='return checkDelete()'> </form>
-      <?php
-  }
+      if(isset($_SESSION['id'])){ 
+        if ($_SESSION['id'] == 1 || $row['user_id'] == $_SESSION['id']) {
+            ?>
+            <form action="deleteing.php">  <input id="deleteb" TYPE = "Submit" Name = "Delete" VALUE = "Изтриване на снимка" onclick='return checkDelete()'> </form>
+            <?php
+          }
+        }
       }
     
   } else {
